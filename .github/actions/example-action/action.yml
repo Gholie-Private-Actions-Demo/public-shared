@@ -1,0 +1,37 @@
+name: 'Example Action'
+description: 'A simple action that processes input and produces output'
+author: 'Your Name'
+
+inputs:
+  message:
+    description: 'Message to process'
+    required: true
+    default: 'Hello World'
+  importance:
+    description: 'Importance level of the message'
+    required: false
+    default: 'normal'
+
+outputs:
+  processed-message:
+    description: 'Processed message with timestamp'
+    value: ${{ steps.process-message.outputs.result }}
+  uppercase-message:
+    description: 'Uppercase version of the message'
+    value: ${{ steps.process-message.outputs.uppercase }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Process Message
+      id: process-message
+      shell: bash
+      run: |
+        echo "result=[${{ inputs.importance }}] Message received at $(date): ${{ inputs.message }}" >> $GITHUB_OUTPUT
+        echo "uppercase=$(echo '${{ inputs.message }}' | tr '[:lower:]' '[:upper:]')" >> $GITHUB_OUTPUT
+    
+    - name: Print Message
+      shell: bash
+      run: |
+        echo "Processed message: ${{ steps.process-message.outputs.result }}"
+        echo "Uppercase message: ${{ steps.process-message.outputs.uppercase }}"

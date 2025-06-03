@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/422df5a6a9d44a52c6c682563d1795b8fd246215/schemas/config.json",
+  "separate-pull-requests": true,
+  "always-update": true,
+  "include-component-in-tag": true,
+  "date-format": "%Y-%m-%d",
+  "release-type": "simple",
+  "commit-search-depth": 20,
+  "tag-separator": "-",
+  "packages": {
+    ".github/actions/example-action": {
+      "package-name": "example-action",
+      "release-type": "simple"
+    }
+  }
+}
