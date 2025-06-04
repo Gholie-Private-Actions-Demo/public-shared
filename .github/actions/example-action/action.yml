@@ -41,3 +41,8 @@ runs:
       run: |
         echo "This is a new feature example step."
         echo "You can add any additional steps here that you want to run after the release is tagged."
+
+    - name: Show release-please flow
+      shell: bash
+      run: |
+        echo "Demonstrating the release-please flow."
