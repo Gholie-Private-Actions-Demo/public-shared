@@ -46,3 +46,4 @@ runs:
       shell: bash
       run: |
         echo "Demonstrating the release-please flow."
+        echo "GitHub was down while creating example"
