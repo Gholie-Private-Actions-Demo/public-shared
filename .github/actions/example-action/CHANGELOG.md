@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Gholie-Private-Actions-Demo/public-shared/compare/example-action-v1.1.0...example-action-v2.0.0) (2025-06-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* this is a breaking change which creates a major version!
+
+### Features
+
+* this is a breaking change which creates a major version! ([bb22cf1](https://github.com/Gholie-Private-Actions-Demo/public-shared/commit/bb22cf10960512a1ce612eb8e4979c0721672cc8))
+
 ## [1.1.0](https://github.com/Gholie-Private-Actions-Demo/public-shared/compare/example-action-v1.0.0...example-action-v1.1.0) (2025-06-03)
 
 
